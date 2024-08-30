@@ -23,7 +23,7 @@ const[summary,Setsummary]=useState("");
 const handleSubmit=async(e)=>{
 e.preventDefault();
 try {
- let response= await axios.post("http://localhost:8080/api/v1/proteusai/chatbot",{text1,text2});  
+ let response= await axios.post("/api/v1/proteusai/chatbot",{text1,text2});  
 
 const {answer1,answer2}=response.data;
 
