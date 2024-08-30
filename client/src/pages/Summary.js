@@ -20,7 +20,7 @@ const[error,Seterror]=useState("");
 const handleSubmit=async(e)=>{
 e.preventDefault();
 try {
- let response= await axios.post("http://localhost:8080/api/v1/proteusai/summary",{text});  
+ let response= await axios.post("/api/v1/proteusai/summary",{text});  
  const {ans}=response.data;
 //  console.log(JSON.stringify(ans));
 //  Setsummary(JSON.stringify(ans,null,2));
