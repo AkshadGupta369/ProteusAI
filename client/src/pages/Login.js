@@ -20,7 +20,7 @@ const[error,SetError]=useState("");
 const handleSubmit=async(e)=>{
 e.preventDefault();
 try {
-  await axios.post("http://localhost:8080/api/v1/auth/login",{email,password});
+  await axios.post("/api/v1/auth/login",{email,password});
 
     localStorage.setItem("authToken",true);
     toast.success("Login Successfully");
