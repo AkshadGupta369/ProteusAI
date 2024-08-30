@@ -6,7 +6,7 @@ const colors=require('colors');
 const dotenv=require('dotenv');
 const connectDB = require('./config/db');
 const errorHandler = require('./middlewares/errorMiddleware');
-
+const path=require("path");
 
 //Routes
 const authRoutes=require("./routes/authRoutes");
@@ -29,7 +29,10 @@ app.use(morgan('dev'));
 app.use(errorHandler);
 
 
-
+app.use(express.static(path.join(__dirname,'./client/build')));
+app.get('*',function(req,res){
+ res.sendFile(path.join(__dirname,'./client/build/index.html'))
+});
 //API ROUTES
 app.use("/api/v1/auth",authRoutes); 
 app.use("/api/v1/proteusai",require("./routes/ProteusaiRoutes"));
