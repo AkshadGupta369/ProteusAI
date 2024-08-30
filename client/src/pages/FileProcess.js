@@ -41,7 +41,7 @@ if (!file) {
 const formData=new FormData();
 formData.append('file',file);
 try {
- let response= await axios.post("http://localhost:8080/api/v1/proteusai/file",formData,{
+ let response= await axios.post("/api/v1/proteusai/file",formData,{
   headers: {
     'Content-Type': 'multipart/form-data',
   },
