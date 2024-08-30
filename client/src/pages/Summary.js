@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import{Box,Typography,useTheme,useMediaQuery,TextField,Button,Alert,Collapse, Card} from "@mui/material";
 import {Link,useNavigate} from "react-router-dom";
 import toast from 'react-hot-toast';
-import axios from "axios";
+import axios from "axios"
 
 
 const Summary = () => {
